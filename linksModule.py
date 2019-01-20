@@ -4,11 +4,7 @@ class Node:
 		self.value = v
 		self.next = None
 
-n1 = Node(12)
-n2 = Node(55)
-
 class LinkedList:
-
 	def __init__(self):
 		self.head = None
 		self.tail = None
@@ -44,7 +40,6 @@ class LinkedList:
 				count = count + 1
 			node = node.next
 		return f_list
-
 
 	def delete(self, val, all):
 		node = self.head
@@ -108,65 +103,3 @@ class LinkedList:
 			node = node.next
 
 
-s_list = LinkedList()
-s_list.add_in_tail(n1)
-s_list.add_in_tail(Node(12))
-s_list.add_in_tail(n2)
-s_list.add_in_tail(Node(128))
-s_list.add_in_tail(Node(128))
-s_list.add_in_tail(Node(11))
-s_list.add_in_tail(Node(128))
-s_list.add_in_tail(Node(12))
-s_list.add_in_tail(Node(11))
-s_list.print_all_nodes()
-print("after delete Nodes")
-s_list.delete(11, all=False)
-s_list.insert(12, 33)
-s_list.print_all_nodes()
-
-print()
-print("Find")
-
-nf = s_list.find(128)
-if nf is not None:
-	print(nf.value)
-
-print("Find all")
-
-nf1 = s_list.find_all(128)
-if nf1 is not None:
-	print(nf1)
-
-print()
-
-s_list.clean()
-s_list.print_all_nodes()
-
-nf = s_list.find(55)
-if nf is not None:
-	print(nf.value)
-
-print("LinkedList length:", s_list.len())
-
-
-n3 = Node(3)
-n4 = Node(4)
-
-n3.next = n4
-
-print("n3", n3.next)
-print("n4", n4.next)
-
-# def sumLinkList(list1, list2):
-# 	list3 = None
-# 	if list1.len() == list2.len():
-# 		for i in list1.len():
-# 			print list1(i)
-# 			# list3.add_in_tail(Node(list1(i) + list2(i)))
-# 	return List1
-#
-# s_list3 = LinkedList()
-# s_list3.add_in_tail(Node(12))
-# s_list4 = LinkedList()
-# s_list4.add_in_tail(Node(12))
-# print("sumList", sumLinkList(s_list3, s_list4))
