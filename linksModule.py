@@ -63,7 +63,7 @@ class LinkedList:
 					return
 				continue
 
-			elif node.value == val:
+			if node.value == val:
 
 				if all == True:
 
@@ -78,8 +78,12 @@ class LinkedList:
 			prev = node
 			node = node.next
 
-		if node.next == None:
+		if node.next is None and prev is None and val == node.value:
+			self.head = None
+
+		elif node.next is None and node.value == val:
 			prev.next = None
+
 
 	def clean(self):
 		self.head = None
