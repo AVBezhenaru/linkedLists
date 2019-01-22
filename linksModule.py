@@ -24,6 +24,10 @@ class LinkedList:
 
 	def find(self, val):
 		node = self.head
+
+		if node is None:
+			return print("linkedList is empty")
+
 		while node is not None:
 			if node.value == val:
 				return node
@@ -32,18 +36,23 @@ class LinkedList:
 
 	def find_all(self, val):
 		node = self.head
-		count = 0
 		f_list = []
+
+		if node is None:
+			return print("linkedList is empty")
+
 		while node is not None:
 			if node.value == val:
 				f_list.append(val)
-				count = count + 1
 			node = node.next
 		return f_list
 
 	def delete(self, val, all):
 		node = self.head
 		prev = None
+
+		if node is None:
+			return print("linkedList is empty")
 
 		while node.next is not None:
 			if node.value == val and prev is None:
@@ -73,16 +82,15 @@ class LinkedList:
 			prev.next = None
 
 	def clean(self):
-		node = self.head
-		while node is not None:
-			node.value = None
-			node = node.next
-
-		return None
+		self.head = None
 
 	def len(self):
 		node = self.head
 		count = 0
+
+		if node is None:
+			return print("linkedList is empty")
+
 		while node is not None:
 			count = count + 1
 			node = node.next
@@ -101,5 +109,22 @@ class LinkedList:
 				return
 
 			node = node.next
+
+# sumLinkListFunction
+
+def sumLinkList(list1, list2):
+	if list1.len() != list2.len():
+		return print("linked lists are not the same")
+
+	buf = list1.head
+	buf2 = list2.head
+	sumBuf = None
+	list3 = LinkedList()
+	while buf is not None:
+		sumBuf = buf.value + buf2.value
+		buf = buf.next
+		buf2 = buf2.next
+		list3.add_in_tail(Node(sumBuf))
+	return list3.print_all_nodes()
 
 

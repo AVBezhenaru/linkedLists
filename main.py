@@ -1,4 +1,5 @@
 from linksModule import *
+from test import *
 
 n1 = Node(12)
 n2 = Node(55)
@@ -35,7 +36,8 @@ if nf1 is not None:
 print()
 
 # s_list.clean()
-# s_list.print_all_nodes()
+print("clean list")
+s_list.print_all_nodes()
 
 nf = s_list.find(55)
 if nf is not None:
@@ -43,26 +45,7 @@ if nf is not None:
 
 print("LinkedList length:", s_list.len())
 
-
-n3 = Node(3)
-n4 = Node(4)
-
-n3.next = n4
-
-print("n3", n3.next)
-print("n4", n4.next)
-
-def sumLinkList(list1, list2):
-	buf = list1.head
-	buf2 = list2.head
-	sumBuf = None
-	list3 = LinkedList()
-	while buf.next is not None:
-		sumBuf = buf.value + buf2.value
-		buf = buf.next
-		buf2 = buf2.next
-		list3.add_in_tail(Node(sumBuf))
-	return list3.print_all_nodes()
-
 sumLinkList(s_list, s_list)
 
+
+deleteTest(s_list, 128, True)
