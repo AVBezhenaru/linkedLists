@@ -18,6 +18,7 @@ class LinkedList:
 
 	def print_all_nodes(self):
 		node = self.head
+
 		while node is not None:
 			print(node.value)
 			node = node.next	
@@ -84,7 +85,6 @@ class LinkedList:
 		elif node.next is None and node.value == val:
 			prev.next = None
 
-
 	def clean(self):
 		self.head = None
 
@@ -101,9 +101,14 @@ class LinkedList:
 		return count
 
 	def insert(self, afterNode, newNode):
+		if self.head is None:
+			self.add_in_tail(Node(newNode))
+			return
+
 		node = self.head
 		after = None
 		nNode = None
+
 		while node is not None:
 			if node.value == afterNode:
 				after = node.next
