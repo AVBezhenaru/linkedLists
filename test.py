@@ -56,6 +56,10 @@ def findAllTest(list, val):
     list.print_all_nodes()
 
     a = list.find_all(val)
+
+    if a == None:
+        print("linkedList is empty")
+
     if a == []:
         print(val, "Find test FAIL \nThere is no such value in this list")
 
