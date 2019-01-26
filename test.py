@@ -25,7 +25,7 @@ def deleteTest(list, val, all):
         a = list.find_all(val)
         list.delete(val, all)
         b = list.find_all(val)
-        if b is None or a > b:
+        if b is not None:
             print("Delete test OK \nAfter delete")
             list.print_all_nodes()
         else:

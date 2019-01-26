@@ -44,7 +44,7 @@ class LinkedList:
 
 		while node is not None:
 			if node.value == val:
-				f_list.append(val)
+				f_list.append(node)
 			node = node.next
 		return f_list
 
