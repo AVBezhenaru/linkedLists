@@ -40,7 +40,7 @@ class LinkedList:
 		f_list = []
 
 		if node is None:
-			return None
+			return f_list
 
 		while node is not None:
 			if node.value == val:
@@ -53,7 +53,7 @@ class LinkedList:
 		prev = None
 
 		if node is None:
-			return print("linkedList is empty")
+			return None
 
 		while node.next is not None:
 			if node.value == val and prev is None:

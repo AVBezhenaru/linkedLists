@@ -3,12 +3,12 @@ from random import *
 from test import *
 
 firstList = LinkedList()
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(3))
-firstList.add_in_tail(Node(2))
-firstList.add_in_tail(Node(1))
+# firstList.add_in_tail(Node(1))
+# firstList.add_in_tail(Node(1))
+# firstList.add_in_tail(Node(1))
+# firstList.add_in_tail(Node(3))
+# firstList.add_in_tail(Node(2))
+# firstList.add_in_tail(Node(1))
 
 print("Delete test")
 deleteTest(firstList, 1, False)
