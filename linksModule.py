@@ -48,12 +48,12 @@ class LinkedList:
 			node = node.next
 		return f_list
 
-	def delete(self, val, all):
+	def delete(self, val, all=False):
 		node = self.head
 		prev = None
 
 		if node is None:
-			return None
+			return
 
 		while node.next is not None:
 			if node.value == val and prev is None:
@@ -93,7 +93,7 @@ class LinkedList:
 		count = 0
 
 		if node is None:
-			return print("linkedList is empty")
+			return count
 
 		while node is not None:
 			count = count + 1
@@ -134,6 +134,6 @@ def sumLinkList(list1, list2):
 		buf = buf.next
 		buf2 = buf2.next
 		list3.add_in_tail(Node(sumBuf))
-	return list3.print_all_nodes()
+	return list3
 
 

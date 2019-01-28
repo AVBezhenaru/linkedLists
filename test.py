@@ -1,7 +1,7 @@
 from linksModule import *
 # tests
 
-def deleteTest(list, val, all):
+def deleteTest(list, val, all=True):
     if list.head == None:
         print("Linked list is empty")
         return
