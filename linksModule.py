@@ -75,6 +75,7 @@ class LinkedList:
 
 				if all == False:
 					currentNode.next = currentNode.next.next
+					self.tail = currentNode
 					return
 
 				prevNode = currentNode
@@ -84,13 +85,12 @@ class LinkedList:
 
 					if currentNode.next is None:
 						prevNode.next = None
+						self.tail = prevNode
 						return
 
 					prevNode.next = currentNode.next
 
 			currentNode = currentNode.next
-
-		# elif all == False:
 
 	def clean(self):
 		self.head = None
