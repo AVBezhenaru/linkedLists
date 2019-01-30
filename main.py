@@ -3,13 +3,13 @@ from random import *
 from test import *
 
 firstList = LinkedList()
+firstList.add_in_tail(Node(1))
+firstList.add_in_tail(Node(1))
+firstList.add_in_tail(Node(1))
+firstList.add_in_tail(Node(1))
 firstList.add_in_tail(Node(2))
 firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
-firstList.add_in_tail(Node(1))
+firstList.add_in_tail(Node(2))
 firstList.add_in_tail(Node(1))
 
 
@@ -44,5 +44,6 @@ cleanTest(firstList)
 # print("Node after delete function")
 # print("head",firstList.head)
 # print("tail",firstList.tail)
+# # print("tail",firstList.tail.value)
 # print("lenght", firstList.len())
 
