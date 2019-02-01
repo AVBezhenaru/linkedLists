@@ -57,13 +57,13 @@ class LinkedList:
 
 		if currentNode.next is None:
 			self.head = None
-			self.tail = None
+			self.tail = self.head
 
 		while currentNode is not None:
 			if currentNode.value == val:
 				self.head = currentNode.next
 				if currentNode.next is None:
-					self.tail = currentNode.next
+					self.tail = self.head
 				currentNode = currentNode.next
 
 				if all == True:

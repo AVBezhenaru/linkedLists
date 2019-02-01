@@ -14,12 +14,18 @@ def deleteTest(list, val, all=True):
 
     if all == True:
         list.delete(val, all)
-        b = list.find_all(val)
-        if b == [] or b is None:
+        b = list.len()
+        if b == 0 and list.head is None and list.tail is None:
             print("Delete test OK \nAfter delete")
             list.print_all_nodes()
+
+        elif b > 0 and list.head is not None and list.tail is not None:
+            print("Delete test OK \nAfter delete")
+            list.print_all_nodes()
+
         else:
             print("Delete test FAIl")
+            list.print_all_nodes()
 
     elif all == False:
         a = list.find_all(val)
