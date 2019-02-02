@@ -7,19 +7,24 @@ def deleteTest(list, val, all=True):
         return
 
     print("before delete")
+    print("head",list.head)
+    print("tail",list.tail)
     list.print_all_nodes()
     a = list.find_all(val)
     if a == []:
         print(val, "There is no such value in this list")
+        return
 
     if all == True:
         list.delete(val, all)
         b = list.len()
-        if b == 0 and list.head is None and list.tail is None:
+        c = list.find_all(val)
+
+        if b == 0 and c == [] and list.head is None and list.tail is None:
             print("Delete test OK \nAfter delete")
             list.print_all_nodes()
 
-        elif b > 0 and list.head is not None and list.tail is not None:
+        elif b > 0 and c == [] and list.head is not None and list.tail is not None:
             print("Delete test OK \nAfter delete")
             list.print_all_nodes()
 
@@ -36,6 +41,9 @@ def deleteTest(list, val, all=True):
             list.print_all_nodes()
         else:
             print("Delete test FAIl")
+
+    print("head", list.head)
+    print("tail", list.tail)
 
 def cleanTest(list):
     if list.head == None:
