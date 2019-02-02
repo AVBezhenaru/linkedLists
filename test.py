@@ -1,49 +1,60 @@
 from linksModule import *
 # tests
 
-def deleteTest(list, val, all=True):
-    if list.head == None:
-        print("Linked list is empty")
-        return
+def deleteTest(list):
+    # if list.head == None:
+    #     print("Linked list is empty")
+    #     return
+    #
+    # print("before delete")
+    # print("head",list.head)
+    # print("tail",list.tail)
+    # list.print_all_nodes()
+    # a = list.find_all(val)
+    # if a == []:
+    #     print(val, "There is no such value in this list")
+    #     return
+    #
+    # if all == True:
+    #     list.delete(val, all)
+    #     b = list.len()
+    #     c = list.find_all(val)
+    #
+    #     if b == 0 and c == [] and list.head is None and list.tail is None:
+    #         print("Delete test OK \nAfter delete")
+    #         list.print_all_nodes()
+    #
+    #     elif b > 0 and c == [] and list.head is not None and list.tail is not None:
+    #         print("Delete test OK \nAfter delete")
+    #         list.print_all_nodes()
+    #
+    #     else:
+    #         print("Delete test FAIl")
+    #         list.print_all_nodes()
+    #
+    # elif all == False:
+    #     a = list.find_all(val)
+    #     list.delete(val, all)
+    #     b = list.find_all(val)
+    #     if b is not None:
+    #         print("Delete test OK \nAfter delete")
+    #         list.print_all_nodes()
+    #     else:
+    #         print("Delete test FAIl")
+    #
+    # print("head", list.head)
+    # print("tail", list.tail)
 
-    print("before delete")
-    print("head",list.head)
-    print("tail",list.tail)
-    list.print_all_nodes()
-    a = list.find_all(val)
-    if a == []:
-        print(val, "There is no such value in this list")
-        return
+    # a = list.delete(2, True)
+    # if b =
+    list.delete(2, True)
+    b = list.len()
 
-    if all == True:
-        list.delete(val, all)
-        b = list.len()
-        c = list.find_all(val)
+    if b == 4 and list.head.value == 1 and list.tail.value == 3:
+        print("Test OK")
 
-        if b == 0 and c == [] and list.head is None and list.tail is None:
-            print("Delete test OK \nAfter delete")
-            list.print_all_nodes()
-
-        elif b > 0 and c == [] and list.head is not None and list.tail is not None:
-            print("Delete test OK \nAfter delete")
-            list.print_all_nodes()
-
-        else:
-            print("Delete test FAIl")
-            list.print_all_nodes()
-
-    elif all == False:
-        a = list.find_all(val)
-        list.delete(val, all)
-        b = list.find_all(val)
-        if b is not None:
-            print("Delete test OK \nAfter delete")
-            list.print_all_nodes()
-        else:
-            print("Delete test FAIl")
-
-    print("head", list.head)
-    print("tail", list.tail)
+    else:
+        print("Test ERROR")
 
 def cleanTest(list):
     if list.head == None:
