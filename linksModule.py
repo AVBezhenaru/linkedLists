@@ -99,6 +99,7 @@ class LinkedList:
 
 	def clean(self):
 		self.head = None
+		self.tail = None
 
 	def len(self):
 		node = self.head
@@ -127,6 +128,9 @@ class LinkedList:
 				nNode = Node(newNode)
 				node.next = nNode
 				nNode.next = after
+
+				if nNode.next is None:
+					self.tail = nNode
 				return
 
 			node = node.next
@@ -135,7 +139,7 @@ class LinkedList:
 
 def sumLinkList(list1, list2):
 	if list1.len() != list2.len():
-		return print("linked lists are not the same")
+		return
 
 	buf = list1.head
 	buf2 = list2.head
