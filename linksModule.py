@@ -79,7 +79,8 @@ class LinkedList:
 
 				if all == False:
 					currentNode.next = currentNode.next.next
-					self.tail = currentNode
+					if currentNode.next is None:
+						self.tail = currentNode
 					return
 
 				prevNode = currentNode
