@@ -113,7 +113,7 @@ class LinkedList:
 			node = node.next
 		return count
 
-	def insert(self, afterNode, newNode):
+	def insert(self, afterNode=None, newNode):
 		if self.head is None:
 			self.add_in_tail(Node(newNode))
 			return
