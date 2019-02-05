@@ -15,7 +15,7 @@ firstList = LinkedList()
 # secondList.add_in_tail(Node(4))
 
 
-firstList.insert(3)
+firstList.insert(None, 3)
 firstList.print_all_nodes()
 print("head", firstList.head.value)
 print("tail", firstList.tail.value)
