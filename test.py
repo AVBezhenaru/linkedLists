@@ -109,16 +109,3 @@ def lengthTest(list):
     else:
         print("Find test FAIL")
 
-def insertTest(list, afterNode, newNode):
-    list.print_all_nodes()
-    a = list.len()
-    print("length is", a)
-    list.insert(afterNode, newNode)
-    b = list.len()
-    if a is None or a < b:
-        print("Linked list")
-        list.print_all_nodes()
-        print("length after insert node is", b, "\nFind test OK")
-
-    else:
-        print("Find test FAIL")

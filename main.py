@@ -2,12 +2,11 @@ from linksModule import *
 from random import *
 from test import *
 
-firstList = LinkedList()
+# firstList = LinkedList()
+# firstList.add_in_tail(Node(1))
+# firstList.add_in_tail(Node(3))
 # firstList.add_in_tail(Node(1))
 # firstList.add_in_tail(Node(1))
-# firstList.add_in_tail(Node(1))
-# firstList.add_in_tail(Node(1))
-
 # secondList = LinkedList()
 # secondList.add_in_tail(Node(1))
 # secondList.add_in_tail(Node(1))
@@ -15,11 +14,42 @@ firstList = LinkedList()
 # secondList.add_in_tail(Node(4))
 
 
-firstList.insert(None, 3)
-firstList.print_all_nodes()
-print("head", firstList.head.value)
-print("tail", firstList.tail.value)
+def insertTest1():
+	print('Insert Test 1')
+	list = LinkedList()
+	list.insert(None, 1)
+	a = list.len()
+	if list.head.value == 1 and list.tail.value == 1 and a == 1:
+		print("Test OK")
+	else:
+		print("Test ERROR")
 
+def insertTest2():
+	print('Insert Test 2')
+	list = LinkedList()
+	list.add_in_tail(Node(1))
+	list.insert(1, 3)
+	a = list.len()
+	if list.head.value == 1 and list.tail.value == 3 and a == 2:
+		print("Test OK")
+	else:
+		print("Test ERROR")
+
+def insertTest3():
+	print('Insert Test 3')
+	list = LinkedList()
+	list.add_in_tail(Node(1))
+	list.add_in_tail(Node(2))
+	list.insert(2, 3)
+	a = list.len()
+	if list.head.value == 1 and list.tail.value == 3 and a == 3:
+		print("Test OK")
+	else:
+		print("Test ERROR")
+
+insertTest1()
+insertTest2()
+insertTest3()
 
 
 # def deleteTest1(list):
