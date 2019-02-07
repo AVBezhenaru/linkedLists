@@ -17,7 +17,7 @@ from test import *
 def insertTest1():
 	print('Insert Test 1')
 	list = LinkedList()
-	list.insert(None, 1)
+	list.insert(list.find(1), Node(1))
 	a = list.len()
 	if list.head.value == 1 and list.tail.value == 1 and a == 1:
 		print("Test OK")
@@ -28,7 +28,7 @@ def insertTest2():
 	print('Insert Test 2')
 	list = LinkedList()
 	list.add_in_tail(Node(1))
-	list.insert(1, 3)
+	list.insert(list.find(1), Node(3))
 	a = list.len()
 	if list.head.value == 1 and list.tail.value == 3 and a == 2:
 		print("Test OK")
@@ -39,8 +39,8 @@ def insertTest3():
 	print('Insert Test 3')
 	list = LinkedList()
 	list.add_in_tail(Node(1))
-	list.add_in_tail(Node(2))
-	list.insert(2, 3)
+	list.add_in_tail(Node(3))
+	list.insert(list.find(1), Node(2))
 	a = list.len()
 	if list.head.value == 1 and list.tail.value == 3 and a == 3:
 		print("Test OK")
